@@ -37,7 +37,7 @@ export default async function EncargosPage() {
 
       {encargos.length === 0 ? (
         <div className="bg-crema-campo rounded-xl p-12 text-center">
-          <p className="text-4xl mb-3">📋</p>
+          <svg className="w-10 h-10 text-gray-300 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
           <p className="text-gray-600">Aún no hay encargos recibidos.</p>
         </div>
       ) : (
@@ -61,23 +61,23 @@ export default async function EncargosPage() {
                     </div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-1 text-sm text-gray-600 mb-3">
-                      <span>📍 {encargo.municipio}</span>
-                      <span>🏠 {encargo.tipo}</span>
-                      <span>💶 {encargo.precio.toLocaleString("es-ES")} €</span>
-                      {encargo.superficie && <span>📐 {encargo.superficie} m²</span>}
+                      <span>{encargo.municipio}</span>
+                      <span className="capitalize">{encargo.tipo}</span>
+                      <span>{encargo.precio.toLocaleString("es-ES")} €</span>
+                      {encargo.superficie && <span>{encargo.superficie} m²</span>}
                     </div>
 
                     <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-                      <a href={`mailto:${encargo.email}`} className="hover:text-verde-aragon">
-                        ✉️ {encargo.email}
+                      <a href={`mailto:${encargo.email}`} className="hover:text-verde-aragon underline">
+                        {encargo.email}
                       </a>
                       <a href={`tel:${encargo.telefono}`} className="hover:text-verde-aragon">
-                        📞 {encargo.telefono}
+                        {encargo.telefono}
                       </a>
                     </div>
 
                     {encargo.direccion && (
-                      <p className="text-xs text-gray-500 mt-1">📌 {encargo.direccion}</p>
+                      <p className="text-xs text-gray-500 mt-1">{encargo.direccion}</p>
                     )}
 
                     {encargo.descripcion && (

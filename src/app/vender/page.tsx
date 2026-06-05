@@ -18,25 +18,33 @@ const municipios = [
 const pasos = [
   {
     num: "01",
-    icon: "📱",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+    ),
     title: "Nos cuentas tu propiedad",
     desc: "Rellenas el formulario online con los datos básicos: ubicación, tipo de propiedad y el precio que tú decides pedir. Sin tasaciones ni imposiciones.",
   },
   {
     num: "02",
-    icon: "📸",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+    ),
     title: "Preparamos el anuncio",
     desc: "Venimos a hacer las fotos (si es necesario) y redactamos una ficha profesional. Publicamos en nuestra web y los principales portales: Idealista, Fotocasa y más.",
   },
   {
     num: "03",
-    icon: "📞",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+    ),
     title: "Gestionamos los interesados",
     desc: "Recibimos las llamadas y consultas, filtramos a los compradores serios y coordinamos las visitas. Tú no tienes que hacer nada más.",
   },
   {
     num: "04",
-    icon: "✍️",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    ),
     title: "Cerramos la venta",
     desc: "Acompañamos la negociación y toda la documentación hasta la firma ante notario. Todo el proceso, sin sorpresas.",
   },
@@ -44,32 +52,44 @@ const pasos = [
 
 const ventajas = [
   {
-    icon: "🌐",
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+    ),
     title: "100% online",
     desc: "Todo el proceso de gestión es online: anuncio, consultas, papeleo. Solo las visitas presenciales cuando haya compradores interesados.",
   },
   {
-    icon: "💶",
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    ),
     title: "Tú pones el precio",
     desc: "Sin tasaciones obligatorias. Decides el precio que quieres pedir por tu propiedad y nosotros lo publicamos tal cual.",
   },
   {
-    icon: "📢",
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" /></svg>
+    ),
     title: "Máxima difusión",
     desc: "Tu propiedad en nuestra web + Idealista + Fotocasa + Milanuncios + redes sociales. Llegamos a compradores de Zaragoza, Barcelona y toda España.",
   },
   {
-    icon: "🏚️",
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+    ),
     title: "Cualquier estado",
     desc: "Vendemos casas en buen estado y también propiedades en desuso, antiguas o que necesitan reforma. Encontramos el comprador adecuado para cada caso.",
   },
   {
-    icon: "📋",
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
+    ),
     title: "Sin complicaciones",
     desc: "Nos encargamos de toda la gestión documental: nota simple, cédula de habitabilidad, contrato de arras, escritura. Tú solo firmas.",
   },
   {
-    icon: "🤝",
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+    ),
     title: "Trato directo",
     desc: "Somos una inmobiliaria local, no una gran corporación. Tendrás siempre el mismo interlocutor que conoce tu propiedad al detalle.",
   },
@@ -171,7 +191,7 @@ export default function VenderPage() {
                 key={v.title}
                 className="bg-crema-campo rounded-2xl p-6 hover:shadow-md transition-shadow"
               >
-                <div className="text-4xl mb-4">{v.icon}</div>
+                <div className="text-verde-aragon mb-4">{v.icon}</div>
                 <h3 className="font-serif text-lg font-semibold text-tierra-oscura mb-2">
                   {v.title}
                 </h3>
@@ -207,7 +227,7 @@ export default function VenderPage() {
                   <div className="w-16 h-16 rounded-full bg-verde-aragon text-crema-campo font-serif text-xl font-bold flex items-center justify-center mx-auto mb-4">
                     {paso.num}
                   </div>
-                  <div className="text-3xl mb-3">{paso.icon}</div>
+                  <div className="text-salvia mb-3">{paso.icon}</div>
                   <h3 className="font-serif text-lg font-semibold text-tierra-oscura mb-2">
                     {paso.title}
                   </h3>
@@ -222,7 +242,9 @@ export default function VenderPage() {
       {/* Mensaje para propiedades en desuso */}
       <section className="py-16 bg-verde-aragon text-crema-campo">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-4xl mb-6">🏚️</p>
+          <div className="flex justify-center mb-6">
+            <svg className="w-12 h-12 text-ocre-calanda" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+          </div>
           <h2 className="font-serif text-3xl font-bold text-crema-campo mb-4">
             ¿Tienes una casa que lleva años cerrada?
           </h2>
@@ -256,9 +278,11 @@ export default function VenderPage() {
 
           {enviado ? (
             <div className="bg-verde-aragon/10 border border-verde-aragon/30 rounded-2xl p-10 text-center">
-              <div className="text-5xl mb-4">✅</div>
+              <div className="flex justify-center mb-4">
+                <svg className="w-12 h-12 text-verde-aragon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </div>
               <h3 className="font-serif text-2xl font-bold text-tierra-oscura mb-3">
-                ¡Recibido!
+                Solicitud recibida
               </h3>
               <p className="text-gray-600 mb-6">
                 Hemos recibido los datos de tu propiedad. Nos ponemos en contacto contigo
