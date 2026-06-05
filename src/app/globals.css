@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --verde-aragon: #1C3A2B;
+  --ocre-calanda: #D4A847;
+  --crema-campo: #F5F0E8;
+  --salvia: #A8C4A8;
+  --tierra-oscura: #3C2E1A;
+}
+
+@layer base {
+  body {
+    background-color: var(--crema-campo);
+    color: var(--tierra-oscura);
+    font-family: Inter, system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ocre-calanda text-tierra-oscura font-semibold px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-verde-aragon text-crema-campo font-semibold px-6 py-3 rounded-lg hover:bg-green-900 transition-colors duration-200;
+  }
+
+  .btn-outline {
+    @apply border-2 border-verde-aragon text-verde-aragon font-semibold px-6 py-3 rounded-lg hover:bg-verde-aragon hover:text-crema-campo transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden;
+  }
+
+  .input-field {
+    @apply w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-verde-aragon focus:border-transparent;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-tierra-oscura mb-1;
+  }
+}

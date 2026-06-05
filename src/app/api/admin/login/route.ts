@@ -1,0 +1,25 @@
+import { NextRequest, NextResponse } from "next/server";
+
+export async function POST(request: NextRequest) {
+  const { password } = await request.json();
+  const adminPassword = process.env.ADMIN_PASSWORD;
+
+  if (!adminPassword) {
+    return NextResponse.json({ error: "Configuración incorrecta del servidor" }, { status: 500 });
+  }
+
+  if (password !== adminPassword) {
+    return NextResponse.json({ error: "Contraseña incorrecta" }, { status: 401 });
+  }
+
+  const response = NextResponse.json({ success: true });
+  response.cookies.set("admin_session", adminPassword, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "strict",
+    maxAge: 60 * 60 * 24, // 24 hours
+    path: "/",
+  });
+
+  return response;
+}

@@ -1,0 +1,23 @@
+import { NextRequest, NextResponse } from "next/server";
+
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // Protect /admin routes (but not /admin/login)
+  if (pathname.startsWith("/admin") && pathname !== "/admin/login") {
+    const session = request.cookies.get("admin_session");
+    const adminPassword = process.env.ADMIN_PASSWORD;
+
+    if (!session || !adminPassword || session.value !== adminPassword) {
+      const loginUrl = new URL("/admin/login", request.url);
+      loginUrl.searchParams.set("redirect", pathname);
+      return NextResponse.redirect(loginUrl);
+    }
+  }
+
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: ["/admin/:path*"],
+};
