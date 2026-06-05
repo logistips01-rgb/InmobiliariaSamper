@@ -51,6 +51,17 @@ const adminLinks = [
   },
 ];
 
+const recursosLinks = [
+  {
+    href: "/admin/recursos/carta",
+    label: "Carta propietarios",
+  },
+  {
+    href: "/admin/recursos/redes",
+    label: "Estrategia redes",
+  },
+];
+
 export default function AdminSidebar() {
   const pathname = usePathname();
 
@@ -82,6 +93,47 @@ export default function AdminSidebar() {
             </Link>
           );
         })}
+
+        {/* Recursos section */}
+        <div className="pt-3">
+          <Link
+            href="/admin/recursos"
+            className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+              pathname.startsWith("/admin/recursos")
+                ? "bg-ocre-calanda text-tierra-oscura"
+                : "text-crema-campo/80 hover:bg-green-800 hover:text-crema-campo"
+            }`}
+          >
+            <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+            </svg>
+            Recursos
+          </Link>
+
+          {pathname.startsWith("/admin/recursos") && (
+            <div className="ml-8 mt-1 space-y-0.5">
+              {recursosLinks.map((link) => {
+                const isSubActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                      isSubActive
+                        ? "bg-green-800 text-crema-campo"
+                        : "text-crema-campo/60 hover:bg-green-800/60 hover:text-crema-campo"
+                    }`}
+                  >
+                    <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </div>
+          )}
+        </div>
       </nav>
 
       <div className="p-4 border-t border-green-800">
