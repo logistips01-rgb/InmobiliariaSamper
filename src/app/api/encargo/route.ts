@@ -4,7 +4,7 @@ import { prisma } from "@/lib/prisma";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { nombre, email, telefono, municipio, direccion, tipo, precio, superficie, descripcion } = body;
+    const { nombre, email, telefono, municipio, direccion, tipo, precio, superficie, descripcion, imagenes } = body;
 
     if (!nombre || !email || !telefono || !municipio || !tipo || !precio) {
       return NextResponse.json({ error: "Faltan campos obligatorios" }, { status: 400 });
@@ -21,6 +21,7 @@ export async function POST(req: NextRequest) {
         precio: parseFloat(precio),
         superficie: superficie ? parseFloat(superficie) : null,
         descripcion: descripcion || null,
+        imagenes: JSON.stringify(imagenes || []),
       },
     });
 

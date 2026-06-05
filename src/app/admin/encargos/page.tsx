@@ -86,6 +86,23 @@ export default async function EncargosPage() {
                       </p>
                     )}
 
+                    {(() => {
+                      const imgs: string[] = JSON.parse(encargo.imagenes || "[]");
+                      return imgs.length > 0 ? (
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {imgs.map((src, i) => (
+                            <a key={i} href={src} target="_blank" rel="noopener noreferrer">
+                              <img
+                                src={src}
+                                alt={`Foto ${i + 1}`}
+                                className="w-20 h-20 object-cover rounded-lg border border-gray-200 hover:opacity-80 transition-opacity"
+                              />
+                            </a>
+                          ))}
+                        </div>
+                      ) : null;
+                    })()}
+
                     <p className="text-xs text-gray-400 mt-3">
                       Recibido el{" "}
                       {new Date(encargo.createdAt).toLocaleDateString("es-ES", {

@@ -107,12 +107,27 @@ export default function VenderPage() {
     superficie: "",
     descripcion: "",
   });
+  const [fotos, setFotos] = useState<File[]>([]);
+  const [previews, setPreviews] = useState<string[]>([]);
   const [enviado, setEnviado] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState("");
   const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleFotos = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    const valid = files.filter((f) => f.type.startsWith("image/")).slice(0, 10);
+    setFotos(valid);
+    setPreviews(valid.map((f) => URL.createObjectURL(f)));
+  };
+
+  const removeFoto = (index: number) => {
+    setFotos((prev) => prev.filter((_, i) => i !== index));
+    setPreviews((prev) => prev.filter((_, i) => i !== index));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -121,10 +136,23 @@ export default function VenderPage() {
     setError("");
 
     try {
+      let imagenes: string[] = [];
+
+      if (fotos.length > 0) {
+        setUploadProgress("Subiendo fotos...");
+        const fd = new FormData();
+        fotos.forEach((f) => fd.append("files", f));
+        const upRes = await fetch("/api/upload", { method: "POST", body: fd });
+        if (!upRes.ok) throw new Error("Error al subir las fotos");
+        const { paths } = await upRes.json();
+        imagenes = paths;
+      }
+
+      setUploadProgress("Enviando solicitud...");
       const res = await fetch("/api/encargo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, imagenes }),
       });
 
       if (!res.ok) throw new Error();
@@ -133,6 +161,7 @@ export default function VenderPage() {
       setError("Ha habido un error. Por favor, inténtalo de nuevo o llámanos directamente.");
     } finally {
       setLoading(false);
+      setUploadProgress("");
     }
   };
 
@@ -449,6 +478,52 @@ export default function VenderPage() {
                 </div>
               </div>
 
+              {/* Fotos */}
+              <div>
+                <h3 className="font-serif text-lg font-semibold text-tierra-oscura mb-1 pb-2 border-b border-salvia/40">
+                  Fotos de la propiedad
+                </h3>
+                <p className="text-xs text-gray-500 mb-4">
+                  Opcional, pero ayuda a encontrar comprador más rápido. Puedes subir hasta 10 imágenes.
+                </p>
+
+                <label className="flex flex-col items-center justify-center w-full border-2 border-dashed border-salvia/60 rounded-xl py-8 px-4 cursor-pointer hover:border-verde-aragon hover:bg-verde-aragon/5 transition-colors bg-white">
+                  <svg className="w-8 h-8 text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span className="text-sm text-gray-600 font-medium">Haz clic para seleccionar fotos</span>
+                  <span className="text-xs text-gray-400 mt-1">JPG, PNG, WEBP — máx. 10 imágenes</span>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    onChange={handleFotos}
+                    className="hidden"
+                  />
+                </label>
+
+                {previews.length > 0 && (
+                  <div className="mt-4 grid grid-cols-3 sm:grid-cols-5 gap-2">
+                    {previews.map((src, i) => (
+                      <div key={i} className="relative group aspect-square">
+                        <img
+                          src={src}
+                          alt={`Foto ${i + 1}`}
+                          className="w-full h-full object-cover rounded-lg"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => removeFoto(i)}
+                          className="absolute top-1 right-1 bg-black/60 text-white rounded-full w-5 h-5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-xs"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               {error && (
                 <p className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3">
                   {error}
@@ -460,7 +535,7 @@ export default function VenderPage() {
                 disabled={loading}
                 className="w-full btn-primary py-4 rounded-xl text-lg font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {loading ? "Enviando..." : "Enviar solicitud de encargo"}
+                {loading ? (uploadProgress || "Enviando...") : "Enviar solicitud de encargo"}
               </button>
 
               <p className="text-xs text-gray-500 text-center">
