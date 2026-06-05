@@ -242,23 +242,31 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA Vender */}
       <section className="py-20 bg-crema-campo">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-4xl font-bold text-tierra-oscura mb-4">
-            ¿Tienes una propiedad que vender?
-          </h2>
-          <p className="text-gray-600 mb-8 text-lg">
-            Contacta con nosotros y te haremos una valoración gratuita sin compromiso.
-            Ponemos tu propiedad en manos expertas.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contacto" className="btn-secondary text-lg px-8 py-4 rounded-xl">
-              Solicitar valoración gratuita
-            </Link>
-            <a href="tel:+34978000000" className="btn-outline text-lg px-8 py-4 rounded-xl">
-              Llamar ahora
-            </a>
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="bg-verde-aragon rounded-3xl p-10 md:p-14 text-center">
+            <p className="text-ocre-calanda text-sm font-semibold uppercase tracking-widest mb-4">
+              Para propietarios
+            </p>
+            <h2 className="font-serif text-4xl font-bold text-crema-campo mb-4">
+              ¿Tienes una propiedad que vender?
+            </h2>
+            <p className="text-salvia text-lg mb-3 max-w-2xl mx-auto leading-relaxed">
+              Somos una inmobiliaria 100% online. Tú pones el precio, nosotros nos encargamos
+              del anuncio, las consultas y las gestiones. Sin tasaciones, sin burocracia.
+            </p>
+            <p className="text-crema-campo/70 text-sm mb-8">
+              Solo necesitarás estar disponible para las visitas presenciales cuando haya compradores interesados.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/vender" className="btn-primary text-lg px-8 py-4 rounded-xl">
+                Quiero vender mi propiedad
+              </Link>
+              <Link href="/contacto" className="border-2 border-crema-campo text-crema-campo hover:bg-crema-campo hover:text-tierra-oscura transition-colors text-lg px-8 py-4 rounded-xl font-semibold">
+                Tengo dudas, contactar
+              </Link>
+            </div>
           </div>
         </div>
       </section>

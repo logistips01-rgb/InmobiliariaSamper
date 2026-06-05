@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/propiedades", label: "Propiedades" },
+  { href: "/vender", label: "Vende tu propiedad" },
   { href: "/contacto", label: "Contacto" },
 ];
 
@@ -44,10 +45,10 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/propiedades"
+              href="/vender"
               className="btn-primary text-sm py-2 px-4 rounded-lg"
             >
-              Ver propiedades
+              Vender propiedad
             </Link>
           </div>
 

@@ -39,3 +39,20 @@ model Contacto {
   leido       Boolean  @default(false)
   createdAt   DateTime @default(now())
 }
+
+model Encargo {
+  id         Int      @id @default(autoincrement())
+  nombre     String
+  email      String
+  telefono   String
+  municipio  String
+  direccion  String?
+  tipo       String   // casa, terreno, local, piso
+  precio     Float
+  superficie Float?
+  descripcion String?
+  estado     String   @default("pendiente") // pendiente, en_gestion, publicada, descartada
+  notas      String?  // notas internas del admin
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
