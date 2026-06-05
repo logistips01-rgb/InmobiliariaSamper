@@ -276,12 +276,9 @@ export default async function HomePage() {
             <h2 className="font-serif text-4xl font-bold text-crema-campo mb-4">
               ¿Tienes una propiedad que vender?
             </h2>
-            <p className="text-salvia text-lg mb-3 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-salvia text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
               Somos una inmobiliaria 100% online. Tú pones el precio, nosotros nos encargamos
               del anuncio, las consultas y las gestiones. Sin tasaciones, sin burocracia.
-            </p>
-            <p className="text-crema-campo/70 text-sm mb-8">
-              Solo necesitarás estar disponible para las visitas presenciales cuando haya compradores interesados.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/vender" className="btn-primary text-lg px-8 py-4 rounded-xl">
