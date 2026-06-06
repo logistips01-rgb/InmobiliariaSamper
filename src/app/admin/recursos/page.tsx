@@ -15,7 +15,7 @@ export default function RecursosPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl">
         {/* Carta propietarios */}
         <Link
           href="/admin/recursos/carta"
@@ -61,6 +61,32 @@ export default function RecursosPage() {
             con hooks y hashtags, guía de tono y herramientas gratuitas recomendadas.
           </p>
           <div className="mt-4 flex items-center gap-2 text-sm text-terracota font-medium">
+            Abrir documento
+            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </Link>
+
+        {/* Dossier ayuntamientos */}
+        <Link
+          href="/admin/recursos/dossier"
+          className="group bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md hover:border-azul-aragon/40 transition-all p-6 flex flex-col"
+        >
+          <div className="w-12 h-12 bg-azul-aragon/10 rounded-lg flex items-center justify-center text-azul-aragon mb-4 group-hover:bg-azul-aragon group-hover:text-crema transition-colors">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h2 className="font-serif text-xl font-bold text-tierra mb-2">
+            Dossier ayuntamientos
+          </h2>
+          <p className="text-sm text-gray-500 leading-relaxed flex-1">
+            Propuesta de colaboración profesional para presentar Revivtaliza a los ayuntamientos del
+            Bajo Aragón. Incluye contexto de despoblación, modalidades de colaboración, beneficios para
+            el municipio y plan de acción en tres pasos. Imprimible en A4.
+          </p>
+          <div className="mt-4 flex items-center gap-2 text-sm text-azul-aragon font-medium">
             Abrir documento
             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

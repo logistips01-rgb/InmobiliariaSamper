@@ -60,6 +60,10 @@ const recursosLinks = [
     href: "/admin/recursos/redes",
     label: "Estrategia redes",
   },
+  {
+    href: "/admin/recursos/dossier",
+    label: "Dossier ayuntamientos",
+  },
 ];
 
 export default function AdminSidebar() {
