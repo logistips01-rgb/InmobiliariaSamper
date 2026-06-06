@@ -263,7 +263,7 @@ export default async function HomePage() {
       </section>
 
       {/* Municipalities */}
-      <section className="py-20 bg-verde-vida text-crema">
+      <section className="py-20 bg-azul-aragon text-crema">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-terracota text-sm font-semibold uppercase tracking-widest mb-3">
@@ -272,6 +272,7 @@ export default async function HomePage() {
             <h2 className="font-serif text-4xl font-bold text-crema mb-4">
               Municipios donde operamos
             </h2>
+            <p className="text-crema/70 text-sm">Bajo Aragón · Provincia de Teruel · Aragón</p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-3">
@@ -287,7 +288,7 @@ export default async function HomePage() {
               <Link
                 key={municipio}
                 href={`/propiedades?municipio=${encodeURIComponent(municipio)}`}
-                className="bg-green-800/50 hover:bg-terracota hover:text-tierra text-crema px-5 py-2.5 rounded-full text-sm font-medium transition-colors border border-green-700 hover:border-terracota"
+                className="bg-white/10 hover:bg-terracota hover:text-white text-crema px-5 py-2.5 rounded-full text-sm font-medium transition-colors border border-white/20 hover:border-terracota"
               >
                 {municipio}
               </Link>

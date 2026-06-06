@@ -15,6 +15,7 @@ const config: Config = {
         "crema": "#F5F0E8",
         "salvia": "#A8C4A8",
         "tierra": "#3C2E1A",
+        "azul-aragon": "#003087",
         // Legacy aliases (keep so any remaining references don't break)
         "verde-aragon": "#1C3A2B",
         "ocre-calanda": "#C4622D",
