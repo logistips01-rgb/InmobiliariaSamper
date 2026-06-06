@@ -125,7 +125,7 @@ export default function PropiedadForm({ propiedad, mode }: PropiedadFormProps) {
 
       {/* Basic info */}
       <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-        <h2 className="font-semibold text-tierra-oscura mb-5">Información básica</h2>
+        <h2 className="font-semibold text-tierra mb-5">Información básica</h2>
         <div className="space-y-4">
           <div>
             <label className="label">Título *</label>
@@ -183,7 +183,7 @@ export default function PropiedadForm({ propiedad, mode }: PropiedadFormProps) {
 
       {/* Location */}
       <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-        <h2 className="font-semibold text-tierra-oscura mb-5">Ubicación</h2>
+        <h2 className="font-semibold text-tierra mb-5">Ubicación</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="label">Dirección / Ubicación *</label>
@@ -213,7 +213,7 @@ export default function PropiedadForm({ propiedad, mode }: PropiedadFormProps) {
 
       {/* Details */}
       <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-        <h2 className="font-semibold text-tierra-oscura mb-5">Características</h2>
+        <h2 className="font-semibold text-tierra mb-5">Características</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           <div>
             <label className="label">Precio (€) *</label>
@@ -279,9 +279,9 @@ export default function PropiedadForm({ propiedad, mode }: PropiedadFormProps) {
               id="destacada"
               checked={form.destacada}
               onChange={(e) => setForm({ ...form, destacada: e.target.checked })}
-              className="w-4 h-4 accent-verde-aragon"
+              className="w-4 h-4 accent-verde-vida"
             />
-            <label htmlFor="destacada" className="text-sm font-medium text-tierra-oscura cursor-pointer">
+            <label htmlFor="destacada" className="text-sm font-medium text-tierra cursor-pointer">
               Propiedad destacada
             </label>
           </div>
@@ -290,7 +290,7 @@ export default function PropiedadForm({ propiedad, mode }: PropiedadFormProps) {
 
       {/* Images */}
       <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-        <h2 className="font-semibold text-tierra-oscura mb-5">Imágenes</h2>
+        <h2 className="font-semibold text-tierra mb-5">Imágenes</h2>
 
         {form.imagenes.length > 0 && (
           <div className="grid grid-cols-3 gap-3 mb-4">
@@ -318,7 +318,7 @@ export default function PropiedadForm({ propiedad, mode }: PropiedadFormProps) {
         )}
 
         <div className="flex gap-3">
-          <label className="cursor-pointer bg-gray-50 border-2 border-dashed border-gray-300 hover:border-verde-aragon rounded-lg px-4 py-3 text-sm text-gray-600 hover:text-verde-aragon transition-colors flex items-center gap-2">
+          <label className="cursor-pointer bg-gray-50 border-2 border-dashed border-gray-300 hover:border-verde-vida rounded-lg px-4 py-3 text-sm text-gray-600 hover:text-verde-vida transition-colors flex items-center gap-2">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
@@ -335,7 +335,7 @@ export default function PropiedadForm({ propiedad, mode }: PropiedadFormProps) {
           <button
             type="button"
             onClick={addPlaceholderImage}
-            className="bg-gray-50 border border-gray-300 hover:border-verde-aragon rounded-lg px-4 py-3 text-sm text-gray-600 hover:text-verde-aragon transition-colors"
+            className="bg-gray-50 border border-gray-300 hover:border-verde-vida rounded-lg px-4 py-3 text-sm text-gray-600 hover:text-verde-vida transition-colors"
           >
             + Placeholder
           </button>

@@ -17,7 +17,7 @@ export default async function AdminPropiedadesPage() {
     <div className="p-8">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="font-serif text-3xl font-bold text-tierra-oscura">Propiedades</h1>
+          <h1 className="font-serif text-3xl font-bold text-tierra">Propiedades</h1>
           <p className="text-gray-500 text-sm mt-1">{propiedades.length} propiedades en total</p>
         </div>
         <Link href="/admin/propiedades/nueva" className="btn-secondary text-sm">
@@ -54,7 +54,7 @@ export default async function AdminPropiedadesPage() {
               {propiedades.length === 0 ? (
                 <tr>
                   <td colSpan={6} className="text-center text-gray-500 py-12">
-                    No hay propiedades. <Link href="/admin/propiedades/nueva" className="text-verde-aragon underline">Crear primera</Link>
+                    No hay propiedades. <Link href="/admin/propiedades/nueva" className="text-verde-vida underline">Crear primera</Link>
                   </td>
                 </tr>
               ) : (
@@ -62,13 +62,13 @@ export default async function AdminPropiedadesPage() {
                   <tr key={p.id} className="hover:bg-gray-50 transition-colors">
                     <td className="px-6 py-4">
                       <div>
-                        <p className="font-medium text-tierra-oscura text-sm line-clamp-1">{p.titulo}</p>
+                        <p className="font-medium text-tierra text-sm line-clamp-1">{p.titulo}</p>
                         <p className="text-xs text-gray-400 mt-0.5">{p.superficie} m²{p.habitaciones ? ` · ${p.habitaciones} hab.` : ""}</p>
                       </div>
                     </td>
                     <td className="px-4 py-4 text-sm text-gray-600">{getTipoLabel(p.tipo)}</td>
                     <td className="px-4 py-4 text-sm text-gray-600">{p.municipio}</td>
-                    <td className="px-4 py-4 text-sm font-semibold text-verde-aragon">{formatPrice(p.precio)}</td>
+                    <td className="px-4 py-4 text-sm font-semibold text-verde-vida">{formatPrice(p.precio)}</td>
                     <td className="px-4 py-4">
                       <span className={`text-xs font-semibold px-2 py-1 rounded-full ${getEstadoColor(p.estado)}`}>
                         {getEstadoLabel(p.estado)}
@@ -79,7 +79,7 @@ export default async function AdminPropiedadesPage() {
                         <Link
                           href={`/propiedades/${p.id}`}
                           target="_blank"
-                          className="text-xs text-gray-500 hover:text-verde-aragon transition-colors"
+                          className="text-xs text-gray-500 hover:text-verde-vida transition-colors"
                         >
                           Ver
                         </Link>

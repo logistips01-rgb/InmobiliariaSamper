@@ -91,7 +91,7 @@ const ventajas = [
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
     ),
     title: "Trato directo",
-    desc: "Somos una inmobiliaria local, no una gran corporación. Tendrás siempre el mismo interlocutor que conoce tu propiedad al detalle.",
+    desc: "Somos un proyecto local, no una gran corporación. Tendrás siempre el mismo interlocutor que conoce tu propiedad al detalle.",
   },
 ];
 
@@ -176,17 +176,17 @@ export default function VenderPage() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl">
-            <p className="text-ocre-calanda text-sm font-semibold uppercase tracking-widest mb-4">
+            <p className="text-terracota text-sm font-semibold uppercase tracking-widest mb-4">
               Vende tu propiedad
             </p>
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-crema-campo mb-6 leading-tight">
-              Tu precio.
+            <h1 className="font-serif text-5xl md:text-6xl font-bold text-crema mb-6 leading-tight">
+              Tu casa cerrada puede cambiar
               <br />
-              <span className="text-ocre-calanda">Nuestro trabajo.</span>
+              <span className="text-terracota">la vida de alguien.</span>
             </h1>
             <p className="text-salvia text-xl mb-8 leading-relaxed">
-              Ponemos tu propiedad en el mercado sin complicaciones. Tú decides el precio,
-              nosotros nos encargamos de todo lo demás — online, sin tasaciones y sin burocracia.
+              Cada casa sin usar en el Bajo Aragón es una oportunidad de traer vida a un pueblo.
+              Tú decides el precio, nosotros hacemos el resto — online, sin tasaciones, con propósito real.
             </p>
             <a
               href="#formulario"
@@ -202,15 +202,15 @@ export default function VenderPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-ocre-calanda text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-terracota text-sm font-semibold uppercase tracking-widest mb-3">
               Por qué elegirnos
             </p>
-            <h2 className="font-serif text-4xl font-bold text-tierra-oscura mb-4">
-              Vender con Inmobiliaria Samper
+            <h2 className="font-serif text-4xl font-bold text-tierra mb-4">
+              Vender con Revivtaliza
             </h2>
             <p className="text-gray-600 max-w-xl mx-auto">
-              Una inmobiliaria pensada para el Bajo Aragón, que entiende las particularidades
-              del mercado local y trabaja para dar salida a propiedades que nadie más ve.
+              Un proyecto pensado para el Bajo Aragón que entiende las particularidades del territorio
+              y cree que cada casa cerrada merece una segunda oportunidad de vivir.
             </p>
           </div>
 
@@ -218,10 +218,10 @@ export default function VenderPage() {
             {ventajas.map((v) => (
               <div
                 key={v.title}
-                className="bg-crema-campo rounded-2xl p-6 hover:shadow-md transition-shadow"
+                className="bg-crema rounded-2xl p-6 hover:shadow-md transition-shadow"
               >
-                <div className="text-verde-aragon mb-4">{v.icon}</div>
-                <h3 className="font-serif text-lg font-semibold text-tierra-oscura mb-2">
+                <div className="text-verde-vida mb-4">{v.icon}</div>
+                <h3 className="font-serif text-lg font-semibold text-tierra mb-2">
                   {v.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{v.desc}</p>
@@ -232,13 +232,13 @@ export default function VenderPage() {
       </section>
 
       {/* Cómo funciona */}
-      <section className="py-20 bg-crema-campo">
+      <section className="py-20 bg-crema">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-ocre-calanda text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-terracota text-sm font-semibold uppercase tracking-widest mb-3">
               El proceso
             </p>
-            <h2 className="font-serif text-4xl font-bold text-tierra-oscura mb-4">
+            <h2 className="font-serif text-4xl font-bold text-tierra mb-4">
               ¿Cómo funciona?
             </h2>
             <p className="text-gray-600 max-w-xl mx-auto">
@@ -253,11 +253,11 @@ export default function VenderPage() {
                   <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-salvia/40 z-0" />
                 )}
                 <div className="relative z-10 text-center">
-                  <div className="w-16 h-16 rounded-full bg-verde-aragon text-crema-campo font-serif text-xl font-bold flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-full bg-verde-vida text-crema font-serif text-xl font-bold flex items-center justify-center mx-auto mb-4">
                     {paso.num}
                   </div>
                   <div className="text-salvia mb-3">{paso.icon}</div>
-                  <h3 className="font-serif text-lg font-semibold text-tierra-oscura mb-2">
+                  <h3 className="font-serif text-lg font-semibold text-tierra mb-2">
                     {paso.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{paso.desc}</p>
@@ -269,12 +269,12 @@ export default function VenderPage() {
       </section>
 
       {/* Mensaje para propiedades en desuso */}
-      <section className="py-16 bg-verde-aragon text-crema-campo">
+      <section className="py-16 bg-verde-vida text-crema">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="flex justify-center mb-6">
-            <svg className="w-12 h-12 text-ocre-calanda" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+            <svg className="w-12 h-12 text-terracota" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
           </div>
-          <h2 className="font-serif text-3xl font-bold text-crema-campo mb-4">
+          <h2 className="font-serif text-3xl font-bold text-crema mb-4">
             ¿Tienes una casa que lleva años cerrada?
           </h2>
           <p className="text-salvia text-lg leading-relaxed mb-6">
@@ -282,7 +282,7 @@ export default function VenderPage() {
             cómo vender. Nos especializamos exactamente en eso: encontrar compradores para
             propiedades que nadie más consigue colocar en el mercado.
           </p>
-          <p className="text-crema-campo/80">
+          <p className="text-crema/80">
             Nómadas digitales, familias buscando casa rural, inversores de bajo presupuesto...
             Hay compradores para cada propiedad. Déjanos encontrarlos.
           </p>
@@ -293,10 +293,10 @@ export default function VenderPage() {
       <section id="formulario" className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-ocre-calanda text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-terracota text-sm font-semibold uppercase tracking-widest mb-3">
               Empezamos
             </p>
-            <h2 className="font-serif text-4xl font-bold text-tierra-oscura mb-4">
+            <h2 className="font-serif text-4xl font-bold text-tierra mb-4">
               Cuéntanos tu propiedad
             </h2>
             <p className="text-gray-600">
@@ -306,11 +306,11 @@ export default function VenderPage() {
           </div>
 
           {enviado ? (
-            <div className="bg-verde-aragon/10 border border-verde-aragon/30 rounded-2xl p-10 text-center">
+            <div className="bg-verde-vida/10 border border-verde-vida/30 rounded-2xl p-10 text-center">
               <div className="flex justify-center mb-4">
-                <svg className="w-12 h-12 text-verde-aragon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <svg className="w-12 h-12 text-verde-vida" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
-              <h3 className="font-serif text-2xl font-bold text-tierra-oscura mb-3">
+              <h3 className="font-serif text-2xl font-bold text-tierra mb-3">
                 Solicitud recibida
               </h3>
               <p className="text-gray-600 mb-6">
@@ -324,16 +324,16 @@ export default function VenderPage() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="bg-crema-campo rounded-2xl p-8 space-y-6"
+              className="bg-crema rounded-2xl p-8 space-y-6"
             >
               {/* Datos personales */}
               <div>
-                <h3 className="font-serif text-lg font-semibold text-tierra-oscura mb-4 pb-2 border-b border-salvia/40">
+                <h3 className="font-serif text-lg font-semibold text-tierra mb-4 pb-2 border-b border-salvia/40">
                   Tus datos de contacto
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-tierra-oscura mb-1">
+                    <label className="block text-sm font-medium text-tierra mb-1">
                       Nombre y apellidos *
                     </label>
                     <input
@@ -342,12 +342,12 @@ export default function VenderPage() {
                       required
                       value={form.nombre}
                       onChange={handleChange}
-                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-aragon bg-white"
+                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-vida bg-white"
                       placeholder="Tu nombre completo"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-tierra-oscura mb-1">
+                    <label className="block text-sm font-medium text-tierra mb-1">
                       Teléfono *
                     </label>
                     <input
@@ -356,12 +356,12 @@ export default function VenderPage() {
                       required
                       value={form.telefono}
                       onChange={handleChange}
-                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-aragon bg-white"
+                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-vida bg-white"
                       placeholder="600 000 000"
                     />
                   </div>
                   <div className="sm:col-span-2">
-                    <label className="block text-sm font-medium text-tierra-oscura mb-1">
+                    <label className="block text-sm font-medium text-tierra mb-1">
                       Email *
                     </label>
                     <input
@@ -370,7 +370,7 @@ export default function VenderPage() {
                       required
                       value={form.email}
                       onChange={handleChange}
-                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-aragon bg-white"
+                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-vida bg-white"
                       placeholder="tu@email.com"
                     />
                   </div>
@@ -379,12 +379,12 @@ export default function VenderPage() {
 
               {/* Datos propiedad */}
               <div>
-                <h3 className="font-serif text-lg font-semibold text-tierra-oscura mb-4 pb-2 border-b border-salvia/40">
+                <h3 className="font-serif text-lg font-semibold text-tierra mb-4 pb-2 border-b border-salvia/40">
                   Datos de la propiedad
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-tierra-oscura mb-1">
+                    <label className="block text-sm font-medium text-tierra mb-1">
                       Municipio *
                     </label>
                     <select
@@ -392,7 +392,7 @@ export default function VenderPage() {
                       required
                       value={form.municipio}
                       onChange={handleChange}
-                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-aragon bg-white"
+                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-vida bg-white"
                     >
                       <option value="">Selecciona municipio</option>
                       {municipios.map((m) => (
@@ -401,7 +401,7 @@ export default function VenderPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-tierra-oscura mb-1">
+                    <label className="block text-sm font-medium text-tierra mb-1">
                       Tipo de propiedad *
                     </label>
                     <select
@@ -409,7 +409,7 @@ export default function VenderPage() {
                       required
                       value={form.tipo}
                       onChange={handleChange}
-                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-aragon bg-white"
+                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-vida bg-white"
                     >
                       <option value="">Selecciona tipo</option>
                       <option value="casa">Casa / Chalet</option>
@@ -420,7 +420,7 @@ export default function VenderPage() {
                     </select>
                   </div>
                   <div className="sm:col-span-2">
-                    <label className="block text-sm font-medium text-tierra-oscura mb-1">
+                    <label className="block text-sm font-medium text-tierra mb-1">
                       Dirección aproximada
                     </label>
                     <input
@@ -428,12 +428,12 @@ export default function VenderPage() {
                       name="direccion"
                       value={form.direccion}
                       onChange={handleChange}
-                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-aragon bg-white"
+                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-vida bg-white"
                       placeholder="Calle, número o referencia catastral (opcional)"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-tierra-oscura mb-1">
+                    <label className="block text-sm font-medium text-tierra mb-1">
                       Precio de venta (€) *
                     </label>
                     <input
@@ -443,13 +443,13 @@ export default function VenderPage() {
                       min="0"
                       value={form.precio}
                       onChange={handleChange}
-                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-aragon bg-white"
+                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-vida bg-white"
                       placeholder="Ej: 45000"
                     />
                     <p className="text-xs text-gray-500 mt-1">Tú decides el precio. Sin tasación obligatoria.</p>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-tierra-oscura mb-1">
+                    <label className="block text-sm font-medium text-tierra mb-1">
                       Superficie (m²)
                     </label>
                     <input
@@ -458,12 +458,12 @@ export default function VenderPage() {
                       min="0"
                       value={form.superficie}
                       onChange={handleChange}
-                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-aragon bg-white"
+                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-vida bg-white"
                       placeholder="Aproximada"
                     />
                   </div>
                   <div className="sm:col-span-2">
-                    <label className="block text-sm font-medium text-tierra-oscura mb-1">
+                    <label className="block text-sm font-medium text-tierra mb-1">
                       Descripción o notas adicionales
                     </label>
                     <textarea
@@ -471,7 +471,7 @@ export default function VenderPage() {
                       value={form.descripcion}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-aragon bg-white resize-none"
+                      className="w-full border border-salvia/50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-verde-vida bg-white resize-none"
                       placeholder="Estado de la propiedad, características especiales, cuándo está disponible para visitas..."
                     />
                   </div>
@@ -480,14 +480,14 @@ export default function VenderPage() {
 
               {/* Fotos */}
               <div>
-                <h3 className="font-serif text-lg font-semibold text-tierra-oscura mb-1 pb-2 border-b border-salvia/40">
+                <h3 className="font-serif text-lg font-semibold text-tierra mb-1 pb-2 border-b border-salvia/40">
                   Fotos de la propiedad
                 </h3>
                 <p className="text-xs text-gray-500 mb-4">
                   Opcional, pero ayuda a encontrar comprador más rápido. Puedes subir hasta 10 imágenes.
                 </p>
 
-                <label className="flex flex-col items-center justify-center w-full border-2 border-dashed border-salvia/60 rounded-xl py-8 px-4 cursor-pointer hover:border-verde-aragon hover:bg-verde-aragon/5 transition-colors bg-white">
+                <label className="flex flex-col items-center justify-center w-full border-2 border-dashed border-salvia/60 rounded-xl py-8 px-4 cursor-pointer hover:border-verde-vida hover:bg-verde-vida/5 transition-colors bg-white">
                   <svg className="w-8 h-8 text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>

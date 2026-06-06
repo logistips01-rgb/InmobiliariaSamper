@@ -46,7 +46,7 @@ export default function FilterSidebar() {
 
   return (
     <aside className="bg-white rounded-xl shadow-md p-6 h-fit">
-      <h2 className="font-serif text-lg font-semibold text-tierra-oscura mb-5">
+      <h2 className="font-serif text-lg font-semibold text-tierra mb-5">
         Filtrar propiedades
       </h2>
 
@@ -130,7 +130,7 @@ export default function FilterSidebar() {
       {hasFilters && (
         <button
           onClick={clearFilters}
-          className="w-full text-sm text-gray-500 hover:text-tierra-oscura underline transition-colors py-1"
+          className="w-full text-sm text-gray-500 hover:text-tierra underline transition-colors py-1"
         >
           Limpiar filtros
         </button>

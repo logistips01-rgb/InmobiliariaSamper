@@ -72,7 +72,7 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
               key={i}
               onClick={() => setActiveIndex(i)}
               className={`relative flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                i === activeIndex ? "border-ocre-calanda" : "border-transparent opacity-60 hover:opacity-100"
+                i === activeIndex ? "border-terracota" : "border-transparent opacity-60 hover:opacity-100"
               }`}
             >
               <Image

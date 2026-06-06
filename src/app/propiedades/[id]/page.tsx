@@ -45,16 +45,16 @@ export default async function PropiedadDetailPage({ params }: Props) {
   const imagenes = parseImagenes(propiedad.imagenes);
 
   return (
-    <div className="bg-crema-campo min-h-screen">
+    <div className="bg-crema min-h-screen">
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <nav className="text-sm flex items-center gap-2 text-gray-500">
-            <Link href="/" className="hover:text-verde-aragon transition-colors">Inicio</Link>
+            <Link href="/" className="hover:text-verde-vida transition-colors">Inicio</Link>
             <span>/</span>
-            <Link href="/propiedades" className="hover:text-verde-aragon transition-colors">Propiedades</Link>
+            <Link href="/propiedades" className="hover:text-verde-vida transition-colors">Propiedades</Link>
             <span>/</span>
-            <span className="text-tierra-oscura font-medium truncate">{propiedad.titulo}</span>
+            <span className="text-tierra font-medium truncate">{propiedad.titulo}</span>
           </nav>
         </div>
       </div>
@@ -66,23 +66,23 @@ export default async function PropiedadDetailPage({ params }: Props) {
             {/* Title and badges */}
             <div>
               <div className="flex flex-wrap gap-2 mb-3">
-                <span className="text-xs font-semibold px-2 py-1 rounded-full bg-verde-aragon text-crema-campo">
+                <span className="text-xs font-semibold px-2 py-1 rounded-full bg-verde-vida text-crema">
                   {getTipoLabel(propiedad.tipo)}
                 </span>
                 <span className={`text-xs font-semibold px-2 py-1 rounded-full ${getEstadoColor(propiedad.estado)}`}>
                   {getEstadoLabel(propiedad.estado)}
                 </span>
                 {propiedad.destacada && (
-                  <span className="text-xs font-semibold px-2 py-1 rounded-full bg-ocre-calanda text-tierra-oscura">
+                  <span className="text-xs font-semibold px-2 py-1 rounded-full bg-terracota text-tierra">
                     ⭐ Destacada
                   </span>
                 )}
               </div>
-              <h1 className="font-serif text-3xl md:text-4xl font-bold text-tierra-oscura mb-2">
+              <h1 className="font-serif text-3xl md:text-4xl font-bold text-tierra mb-2">
                 {propiedad.titulo}
               </h1>
               <p className="text-gray-600 flex items-center gap-1">
-                <svg className="w-4 h-4 text-ocre-calanda" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-terracota" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -95,7 +95,7 @@ export default async function PropiedadDetailPage({ params }: Props) {
 
             {/* Description */}
             <div className="bg-white rounded-xl p-6">
-              <h2 className="font-serif text-xl font-semibold text-tierra-oscura mb-4">
+              <h2 className="font-serif text-xl font-semibold text-tierra mb-4">
                 Descripción
               </h2>
               <p className="text-gray-700 leading-relaxed whitespace-pre-line">
@@ -105,7 +105,7 @@ export default async function PropiedadDetailPage({ params }: Props) {
 
             {/* Specs */}
             <div className="bg-white rounded-xl p-6">
-              <h2 className="font-serif text-xl font-semibold text-tierra-oscura mb-4">
+              <h2 className="font-serif text-xl font-semibold text-tierra mb-4">
                 Características
               </h2>
               <dl className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -132,7 +132,7 @@ export default async function PropiedadDetailPage({ params }: Props) {
           <div className="space-y-6">
             {/* Price card */}
             <div className="bg-white rounded-xl p-6 shadow-md sticky top-20">
-              <p className="text-3xl font-bold text-verde-aragon mb-1">
+              <p className="text-3xl font-bold text-verde-vida mb-1">
                 {formatPrice(propiedad.precio)}
               </p>
               {propiedad.habitaciones && (
@@ -161,7 +161,7 @@ export default async function PropiedadDetailPage({ params }: Props) {
               </div>
 
               <div className="border-t pt-6">
-                <h3 className="font-serif font-semibold text-tierra-oscura mb-4">
+                <h3 className="font-serif font-semibold text-tierra mb-4">
                   ¿Te interesa esta propiedad?
                 </h3>
                 <ContactForm
@@ -179,9 +179,9 @@ export default async function PropiedadDetailPage({ params }: Props) {
 
 function SpecItem({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-crema-campo rounded-lg p-3">
+    <div className="bg-crema rounded-lg p-3">
       <dt className="text-xs text-gray-500 mb-0.5">{label}</dt>
-      <dd className="font-semibold text-tierra-oscura text-sm">{value}</dd>
+      <dd className="font-semibold text-tierra text-sm">{value}</dd>
     </div>
   );
 }

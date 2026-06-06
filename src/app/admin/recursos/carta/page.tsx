@@ -8,14 +8,14 @@ export default function CartaPropietariosPage() {
       {/* Screen header */}
       <div className="mb-8 flex items-center justify-between print:hidden">
         <div>
-          <h1 className="font-serif text-3xl font-bold text-tierra-oscura">Carta para propietarios</h1>
+          <h1 className="font-serif text-3xl font-bold text-tierra">Carta para propietarios</h1>
           <p className="text-gray-500 text-sm mt-1">
             Plantilla de captación para propietarios de viviendas deshabitadas
           </p>
         </div>
         <button
           onClick={() => window.print()}
-          className="flex items-center gap-2 bg-verde-aragon text-crema-campo px-5 py-2.5 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
+          className="flex items-center gap-2 bg-verde-vida text-crema px-5 py-2.5 rounded-lg font-medium hover:bg-green-800 transition-colors text-sm"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
@@ -40,25 +40,25 @@ export default function CartaPropietariosPage() {
         <div className="carta-print p-10 print:p-0">
 
           {/* Letterhead */}
-          <div className="border-b-2 border-verde-aragon pb-6 mb-8 flex items-start justify-between">
+          <div className="border-b-2 border-verde-vida pb-6 mb-8 flex items-start justify-between">
             <div>
-              <h2 className="font-serif text-2xl font-bold text-verde-aragon tracking-tight">
-                Inmobiliaria Samper
+              <h2 className="font-serif text-2xl font-bold text-verde-vida tracking-tight">
+                Revivtaliza
               </h2>
               <p className="text-sm text-gray-500 mt-0.5 italic">
                 Donde encontramos el hogar que nadie ve
               </p>
             </div>
             <div className="text-right text-xs text-gray-500 space-y-0.5">
-              <p>info@inmobiliariasamper.com</p>
+              <p>info@revivtaliza.com</p>
               <p>+34 XXX XXX XXX</p>
-              <p>www.inmobiliariasamper.com</p>
+              <p>www.revivtaliza.es</p>
             </div>
           </div>
 
           {/* Recipient block */}
           <div className="mb-8 space-y-1">
-            <p className="font-semibold text-tierra-oscura">A/A: <span className="font-normal text-gray-600">[NOMBRE PROPIETARIO]</span></p>
+            <p className="font-semibold text-tierra">A/A: <span className="font-normal text-gray-600">[NOMBRE PROPIETARIO]</span></p>
             <p className="text-gray-600 text-sm">[DIRECCIÓN COMPLETA DEL PROPIETARIO]</p>
             <p className="text-gray-600 text-sm">[CÓDIGO POSTAL] — [LOCALIDAD]</p>
           </div>
@@ -66,15 +66,15 @@ export default function CartaPropietariosPage() {
           {/* Date + reference */}
           <div className="mb-8 flex items-start justify-between text-sm text-gray-600">
             <div>
-              <span className="font-medium text-tierra-oscura">Ref. Catastral:</span>{" "}
+              <span className="font-medium text-tierra">Ref. Catastral:</span>{" "}
               <span className="font-mono text-xs bg-gray-100 px-1.5 py-0.5 rounded">[REFERENCIA CATASTRAL]</span>
             </div>
             <p>Samper de Calanda, <span>[FECHA]</span></p>
           </div>
 
           {/* Subject */}
-          <div className="mb-6 bg-crema-campo/40 border-l-4 border-verde-aragon pl-4 py-2 print:bg-gray-50">
-            <p className="text-sm font-semibold text-tierra-oscura">
+          <div className="mb-6 bg-crema/40 border-l-4 border-verde-vida pl-4 py-2 print:bg-gray-50">
+            <p className="text-sm font-semibold text-tierra">
               Asunto: Propuesta de colaboración para la gestión de venta de inmueble
             </p>
           </div>
@@ -82,12 +82,12 @@ export default function CartaPropietariosPage() {
           {/* Body */}
           <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
             <p>
-              Estimado/a <span className="font-medium text-tierra-oscura">[NOMBRE PROPIETARIO]</span>,
+              Estimado/a <span className="font-medium text-tierra">[NOMBRE PROPIETARIO]</span>,
             </p>
 
             <p>
-              Me dirijo a usted desde <strong>Inmobiliaria Samper</strong>, agencia inmobiliaria especializada
-              en propiedades rurales del <strong>Bajo Aragón</strong> (Teruel), para presentarle una propuesta
+              Me dirijo a usted desde <strong>Revivtaliza</strong>, proyecto de revitalización rural a través
+              del mercado inmobiliario en el <strong>Bajo Aragón</strong> (Teruel), para presentarle una propuesta
               de colaboración que podría ser de su interés.
             </p>
 
@@ -100,7 +100,7 @@ export default function CartaPropietariosPage() {
             </p>
 
             <p>
-              Desde Inmobiliaria Samper nos especializamos precisamente en dar visibilidad a estas viviendas
+              Desde Revivtaliza nos especializamos precisamente en dar visibilidad a estas viviendas
               y conectarlas con compradores reales que buscan una vida tranquila en el Aragón rural: familias
               de ciudad, teletrabajadores, personas que desean recuperar sus raíces o simplemente invertir
               en un entorno natural único.
@@ -108,8 +108,8 @@ export default function CartaPropietariosPage() {
 
             {/* Value proposition */}
             <div className="my-6 rounded-lg border border-gray-200 overflow-hidden print:border-gray-300">
-              <div className="bg-verde-aragon px-5 py-3 print:bg-gray-100">
-                <p className="text-crema-campo font-semibold text-sm print:text-gray-800">
+              <div className="bg-verde-vida px-5 py-3 print:bg-gray-100">
+                <p className="text-crema font-semibold text-sm print:text-gray-800">
                   ¿Qué ofrecemos?
                 </p>
               </div>
@@ -144,7 +144,7 @@ export default function CartaPropietariosPage() {
                   <div key={item.title} className="flex items-start gap-3 px-5 py-3.5">
                     <span className="text-lg mt-0.5 print:hidden">{item.icon}</span>
                     <div>
-                      <p className="font-semibold text-tierra-oscura text-sm">{item.title}</p>
+                      <p className="font-semibold text-tierra text-sm">{item.title}</p>
                       <p className="text-gray-600 text-xs mt-0.5">{item.desc}</p>
                     </div>
                   </div>
@@ -158,26 +158,26 @@ export default function CartaPropietariosPage() {
             </p>
 
             {/* CTA box */}
-            <div className="my-6 rounded-lg bg-ocre-calanda/20 border border-ocre-calanda/40 p-5 print:bg-gray-50 print:border-gray-300">
-              <p className="font-semibold text-tierra-oscura text-sm mb-2">Contáctenos cuando lo desee:</p>
+            <div className="my-6 rounded-lg bg-terracota/20 border border-terracota/40 p-5 print:bg-gray-50 print:border-gray-300">
+              <p className="font-semibold text-tierra text-sm mb-2">Contáctenos cuando lo desee:</p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-sm">
                 <div className="flex items-center gap-2 text-gray-700">
-                  <svg className="w-4 h-4 text-verde-aragon flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-verde-vida flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   <span><strong>+34 XXX XXX XXX</strong></span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700">
-                  <svg className="w-4 h-4 text-verde-aragon flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-verde-vida flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span>info@inmobiliariasamper.com</span>
+                  <span>info@revivtaliza.com</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700">
-                  <svg className="w-4 h-4 text-verde-aragon flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-verde-vida flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
-                  <span>www.inmobiliariasamper.com</span>
+                  <span>www.revivtaliza.es</span>
                 </div>
               </div>
             </div>
@@ -192,7 +192,7 @@ export default function CartaPropietariosPage() {
           {/* Signature block */}
           <div className="mt-12 pt-4">
             <div className="w-48 h-16 border-b-2 border-gray-300 mb-2" />
-            <p className="text-sm font-semibold text-tierra-oscura">Inmobiliaria Samper</p>
+            <p className="text-sm font-semibold text-tierra">Revivtaliza</p>
             <p className="text-xs text-gray-500">Agente inmobiliario</p>
             <p className="text-xs text-gray-500">Bajo Aragón, Teruel</p>
           </div>
@@ -211,7 +211,7 @@ export default function CartaPropietariosPage() {
               </svg>
             </div>
             <div>
-              <h2 className="font-serif text-xl font-bold text-tierra-oscura">Versión WhatsApp / SMS</h2>
+              <h2 className="font-serif text-xl font-bold text-tierra">Versión WhatsApp / SMS</h2>
               <p className="text-xs text-gray-500 mt-0.5">Mensaje corto para primer contacto directo</p>
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function CartaPropietariosPage() {
                   const text = document.getElementById("whatsapp-text")?.innerText || "";
                   navigator.clipboard.writeText(text).catch(() => {});
                 }}
-                className="text-xs text-verde-aragon hover:underline flex items-center gap-1"
+                className="text-xs text-verde-vida hover:underline flex items-center gap-1"
               >
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
@@ -233,7 +233,7 @@ export default function CartaPropietariosPage() {
               </button>
             </div>
             <div id="whatsapp-text" className="text-sm text-gray-700 whitespace-pre-line leading-relaxed font-mono">
-{`Hola [NOMBRE], soy de Inmobiliaria Samper. 👋
+{`Hola [NOMBRE], soy de Revivtaliza. 👋
 
 Hemos visto que es usted propietario de una vivienda en [MUNICIPIO] (ref. [REFERENCIA CATASTRAL]) y nos gustaría presentarle nuestro servicio de venta online gratuito.
 
@@ -244,13 +244,13 @@ Hemos visto que es usted propietario de una vivienda en [MUNICIPIO] (ref. [REFER
 
 Si le interesa saber más, estaremos encantados de llamarle o atenderle por este mismo canal. ¡Sin compromiso!
 
-Inmobiliaria Samper | www.inmobiliariasamper.com`}
+Revivtaliza | www.revivtaliza.es`}
             </div>
           </div>
 
-          <div className="mt-4 p-4 rounded-lg bg-ocre-calanda/10 border border-ocre-calanda/30">
+          <div className="mt-4 p-4 rounded-lg bg-terracota/10 border border-terracota/30">
             <p className="text-xs text-gray-600">
-              <strong className="text-tierra-oscura">Consejo:</strong> Personalice siempre el nombre del propietario
+              <strong className="text-tierra">Consejo:</strong> Personalice siempre el nombre del propietario
               y el municipio antes de enviar. Un mensaje personalizado tiene mucho más porcentaje de respuesta
               que uno genérico.
             </p>

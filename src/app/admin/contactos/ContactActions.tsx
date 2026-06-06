@@ -38,7 +38,7 @@ export default function ContactActions({ id, leido }: { id: number; leido: boole
         <button
           onClick={markAsRead}
           disabled={loading}
-          className="text-xs text-verde-aragon hover:underline font-medium disabled:opacity-40 whitespace-nowrap"
+          className="text-xs text-verde-vida hover:underline font-medium disabled:opacity-40 whitespace-nowrap"
         >
           Marcar leído
         </button>

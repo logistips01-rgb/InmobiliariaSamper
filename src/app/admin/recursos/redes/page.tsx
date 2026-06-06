@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Estrategia de Redes Sociales | Inmobiliaria Samper",
+  title: "Estrategia de Redes Sociales | Revivtaliza",
 };
 
 export default function EstrategiaRedesPage() {
@@ -11,17 +11,17 @@ export default function EstrategiaRedesPage() {
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
-          <Link href="/admin/recursos" className="hover:text-verde-aragon transition-colors">
+          <Link href="/admin/recursos" className="hover:text-verde-vida transition-colors">
             Recursos
           </Link>
           <span>/</span>
           <span>Estrategia redes sociales</span>
         </div>
-        <h1 className="font-serif text-3xl font-bold text-tierra-oscura">
+        <h1 className="font-serif text-3xl font-bold text-tierra">
           Estrategia de Redes Sociales
         </h1>
         <p className="text-gray-500 text-sm mt-1">
-          Plan de contenido para Instagram y Facebook — Inmobiliaria Samper
+          Plan de contenido para Instagram y Facebook — Revivtaliza
         </p>
       </div>
 
@@ -39,7 +39,7 @@ export default function EstrategiaRedesPage() {
                 </svg>
               }
               title="Brand awareness"
-              description="Posicionar Inmobiliaria Samper como la referencia inmobiliaria del Bajo Aragón rural. Que cuando alguien piense en vender o comprar en la zona, nos conozca."
+              description="Posicionar Revivtaliza como la referencia inmobiliaria del Bajo Aragón rural. Que cuando alguien piense en vender o comprar en la zona, nos conozca."
             />
             <ObjectiveCard
               icon={
@@ -73,9 +73,9 @@ export default function EstrategiaRedesPage() {
                 <p className="text-white/80 text-xs mt-0.5">Canal visual principal</p>
               </div>
               <div className="p-5 space-y-3">
-                <ProfileItem label="Nombre de perfil" value="@inmobiliariasamper" />
+                <ProfileItem label="Nombre de perfil" value="@revivtaliza" />
                 <ProfileItem label="Bio" value='"Casas con historia en el Bajo Aragón · Vende o compra sin complicaciones · 🌿 Teruel · Link ↓"' />
-                <ProfileItem label="Link en bio" value="Enlace a inmobiliariasamper.com + link a WhatsApp de contacto (Linktree o similar)" />
+                <ProfileItem label="Link en bio" value="Enlace a revivtaliza.es + link a WhatsApp de contacto (Linktree o similar)" />
                 <ProfileItem label="Foto de perfil" value="Logo sobre fondo verde oscuro (verde-aragón). Evitar texto pequeño." />
                 <ProfileItem label="Frecuencia" value="3-4 publicaciones por semana + Stories diarios cuando sea posible" />
                 <ProfileItem label="Formato estrella" value="Reels de propiedades (vídeo corto 30-60s) + carruseles informativos" />
@@ -89,7 +89,7 @@ export default function EstrategiaRedesPage() {
                 <p className="text-white/80 text-xs mt-0.5">Alcance local y audiencia mayor</p>
               </div>
               <div className="p-5 space-y-3">
-                <ProfileItem label="Página" value="Inmobiliaria Samper — Página de empresa verificada" />
+                <ProfileItem label="Página" value="Revivtaliza — Página de empresa verificada" />
                 <ProfileItem label="Descripción" value="Agencia inmobiliaria especializada en propiedades rurales del Bajo Aragón (Teruel). Vende sin complicaciones." />
                 <ProfileItem label="CTA del perfil" value="Botón «Enviar mensaje» o «Llamar ahora»" />
                 <ProfileItem label="Grupos locales" value="Participar en grupos de Samper de Calanda, Alcorisa, Andorra, etc. para ganar visibilidad orgánica" />
@@ -106,8 +106,8 @@ export default function EstrategiaRedesPage() {
           <div className="space-y-4">
             <ContentPillar
               percentage={40}
-              color="bg-verde-aragon"
-              textColor="text-verde-aragon"
+              color="bg-verde-vida"
+              textColor="text-verde-vida"
               title="Propiedades en venta"
               description="El corazón del perfil. Cada propiedad nueva merece al menos dos publicaciones: una presentación visual (carrusel de fotos o Reel) y un post con detalles clave."
               tips={[
@@ -120,8 +120,8 @@ export default function EstrategiaRedesPage() {
             />
             <ContentPillar
               percentage={25}
-              color="bg-ocre-calanda"
-              textColor="text-ocre-calanda"
+              color="bg-terracota"
+              textColor="text-terracota"
               title="El territorio"
               description="Vender el estilo de vida, no solo la casa. Fotos y vídeos del paisaje, los pueblos, la naturaleza y la gastronomía del Bajo Aragón despiertan el deseo de vivir allí."
               tips={[
@@ -151,7 +151,7 @@ export default function EstrategiaRedesPage() {
               color="bg-salvia"
               textColor="text-green-700"
               title="Confianza y proceso"
-              description="Mostrar cómo funciona Inmobiliaria Samper por dentro genera confianza. Transparencia sobre el proceso, la documentación y los pasos de una venta."
+              description="Mostrar cómo funciona Revivtaliza por dentro genera confianza. Transparencia sobre el proceso, la documentación y los pasos de una venta."
               tips={[
                 "«Así publicamos tu casa: de la foto al portal en 48h»",
                 "«¿Qué documentos necesitas para vender?» — carrusel educativo",
@@ -169,7 +169,7 @@ export default function EstrategiaRedesPage() {
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
             <table className="w-full text-sm">
               <thead>
-                <tr className="bg-verde-aragon text-crema-campo">
+                <tr className="bg-verde-vida text-crema">
                   <th className="text-left px-5 py-3 font-semibold">Día</th>
                   <th className="text-left px-5 py-3 font-semibold">Formato</th>
                   <th className="text-left px-5 py-3 font-semibold">Pilar</th>
@@ -177,8 +177,8 @@ export default function EstrategiaRedesPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                <CalendarRow day="Lunes" format="Carrusel / Reel" pillar="Propiedades (40%)" pillarbg="bg-verde-aragon/10 text-verde-aragon" description="Presenta una propiedad nueva o destaca una que lleve tiempo publicada. Empieza la semana con el producto." />
-                <CalendarRow day="Miércoles" format="Post + imagen" pillar="Territorio (25%)" pillarbg="bg-ocre-calanda/20 text-amber-700" description="Foto del paisaje, el pueblo o la vida rural del Bajo Aragón. Contenido aspiracional y de comunidad." />
+                <CalendarRow day="Lunes" format="Carrusel / Reel" pillar="Propiedades (40%)" pillarbg="bg-verde-vida/10 text-verde-vida" description="Presenta una propiedad nueva o destaca una que lleve tiempo publicada. Empieza la semana con el producto." />
+                <CalendarRow day="Miércoles" format="Post + imagen" pillar="Territorio (25%)" pillarbg="bg-terracota/20 text-amber-700" description="Foto del paisaje, el pueblo o la vida rural del Bajo Aragón. Contenido aspiracional y de comunidad." />
                 <CalendarRow day="Viernes" format="Story + Post" pillar="Captación (20%)" pillarbg="bg-amber-600/10 text-amber-700" description="Mensaje dirigido a propietarios. Viernes es buen día para que decidan contactar el fin de semana." />
                 <CalendarRow day="Domingo" format="Carrusel o vídeo corto" pillar="Confianza (15%)" pillarbg="bg-salvia/40 text-green-700" description="Contenido educativo, proceso o testimonio. El domingo la gente tiene más tiempo para leer y reflexionar." />
               </tbody>
@@ -206,10 +206,10 @@ export default function EstrategiaRedesPage() {
           <SectionTitle number="6" title="Hashtags" />
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 space-y-6">
             <div>
-              <h3 className="font-semibold text-tierra-oscura mb-3">Set principal (todos los posts)</h3>
+              <h3 className="font-semibold text-tierra mb-3">Set principal (todos los posts)</h3>
               <div className="flex flex-wrap gap-2">
                 {primaryHashtags.map((tag) => (
-                  <span key={tag} className="bg-verde-aragon/10 text-verde-aragon border border-verde-aragon/20 text-xs px-2.5 py-1 rounded-full font-mono">
+                  <span key={tag} className="bg-verde-vida/10 text-verde-vida border border-verde-vida/20 text-xs px-2.5 py-1 rounded-full font-mono">
                     {tag}
                   </span>
                 ))}
@@ -234,9 +234,9 @@ export default function EstrategiaRedesPage() {
               />
             </div>
 
-            <div className="p-4 bg-ocre-calanda/10 rounded-lg border border-ocre-calanda/30">
+            <div className="p-4 bg-terracota/10 rounded-lg border border-terracota/30">
               <p className="text-xs text-gray-600">
-                <strong className="text-tierra-oscura">Recomendación:</strong> Usa entre 8 y 15 hashtags por publicación en Instagram. No repitas exactamente el mismo set en cada post — rota entre el set principal más uno de los específicos según el contenido.
+                <strong className="text-tierra">Recomendación:</strong> Usa entre 8 y 15 hashtags por publicación en Instagram. No repitas exactamente el mismo set en cada post — rota entre el set principal más uno de los específicos según el contenido.
               </p>
             </div>
           </div>
@@ -247,8 +247,8 @@ export default function EstrategiaRedesPage() {
           <SectionTitle number="7" title="Tono y estilo" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
-              <h3 className="font-semibold text-tierra-oscura mb-4 flex items-center gap-2">
-                <span className="w-5 h-5 rounded-full bg-verde-aragon flex items-center justify-center">
+              <h3 className="font-semibold text-tierra mb-4 flex items-center gap-2">
+                <span className="w-5 h-5 rounded-full bg-verde-vida flex items-center justify-center">
                   <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                   </svg>
@@ -258,7 +258,7 @@ export default function EstrategiaRedesPage() {
               <ul className="space-y-2.5">
                 {voiceDo.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
-                    <span className="text-verde-aragon mt-0.5 flex-shrink-0">+</span>
+                    <span className="text-verde-vida mt-0.5 flex-shrink-0">+</span>
                     {item}
                   </li>
                 ))}
@@ -266,7 +266,7 @@ export default function EstrategiaRedesPage() {
             </div>
 
             <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
-              <h3 className="font-semibold text-tierra-oscura mb-4 flex items-center gap-2">
+              <h3 className="font-semibold text-tierra mb-4 flex items-center gap-2">
                 <span className="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
                   <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
@@ -285,11 +285,11 @@ export default function EstrategiaRedesPage() {
             </div>
 
             <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 md:col-span-2">
-              <h3 className="font-semibold text-tierra-oscura mb-4">Estilo fotográfico</h3>
+              <h3 className="font-semibold text-tierra mb-4">Estilo fotográfico</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {photoStyle.map(({ title, desc }) => (
                   <div key={title} className="bg-gray-50 rounded-lg p-3">
-                    <p className="font-medium text-sm text-tierra-oscura mb-1">{title}</p>
+                    <p className="font-medium text-sm text-tierra mb-1">{title}</p>
                     <p className="text-xs text-gray-600">{desc}</p>
                   </div>
                 ))}
@@ -304,13 +304,13 @@ export default function EstrategiaRedesPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {tools.map(({ name, use, url }) => (
               <div key={name} className="bg-white rounded-xl border border-gray-200 shadow-sm p-5">
-                <p className="font-semibold text-tierra-oscura">{name}</p>
+                <p className="font-semibold text-tierra">{name}</p>
                 <p className="text-xs text-gray-600 mt-1 mb-3">{use}</p>
                 <a
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-verde-aragon hover:underline"
+                  className="text-xs text-verde-vida hover:underline"
                 >
                   {url.replace("https://", "")}
                 </a>
@@ -323,13 +323,13 @@ export default function EstrategiaRedesPage() {
 
       {/* Footer nav */}
       <div className="mt-12 pt-6 border-t border-gray-200 flex items-center justify-between">
-        <Link href="/admin/recursos" className="text-sm text-gray-500 hover:text-verde-aragon transition-colors flex items-center gap-1">
+        <Link href="/admin/recursos" className="text-sm text-gray-500 hover:text-verde-vida transition-colors flex items-center gap-1">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           Volver a Recursos
         </Link>
-        <Link href="/admin/recursos/carta" className="text-sm text-verde-aragon hover:underline flex items-center gap-1">
+        <Link href="/admin/recursos/carta" className="text-sm text-verde-vida hover:underline flex items-center gap-1">
           Ver carta propietarios
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -345,10 +345,10 @@ export default function EstrategiaRedesPage() {
 function SectionTitle({ number, title }: { number: string; title: string }) {
   return (
     <div className="flex items-center gap-3 mb-5">
-      <span className="w-8 h-8 rounded-full bg-verde-aragon text-crema-campo text-sm font-bold flex items-center justify-center flex-shrink-0">
+      <span className="w-8 h-8 rounded-full bg-verde-vida text-crema text-sm font-bold flex items-center justify-center flex-shrink-0">
         {number}
       </span>
-      <h2 className="font-serif text-xl font-bold text-tierra-oscura">{title}</h2>
+      <h2 className="font-serif text-xl font-bold text-tierra">{title}</h2>
     </div>
   );
 }
@@ -356,10 +356,10 @@ function SectionTitle({ number, title }: { number: string; title: string }) {
 function ObjectiveCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
     <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5">
-      <div className="w-10 h-10 bg-verde-aragon/10 rounded-lg flex items-center justify-center text-verde-aragon mb-3">
+      <div className="w-10 h-10 bg-verde-vida/10 rounded-lg flex items-center justify-center text-verde-vida mb-3">
         {icon}
       </div>
-      <h3 className="font-semibold text-tierra-oscura mb-1">{title}</h3>
+      <h3 className="font-semibold text-tierra mb-1">{title}</h3>
       <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
     </div>
   );
@@ -388,7 +388,7 @@ function ContentPillar({
             <div className={`h-full ${color} rounded-full`} style={{ width: `${percentage}%` }} />
           </div>
         </div>
-        <h3 className="font-semibold text-tierra-oscura text-sm">{title}</h3>
+        <h3 className="font-semibold text-tierra text-sm">{title}</h3>
       </div>
       <div className="p-5">
         <p className="text-sm text-gray-600 mb-3 leading-relaxed">{description}</p>
@@ -412,7 +412,7 @@ function CalendarRow({
 }) {
   return (
     <tr className="hover:bg-gray-50 transition-colors">
-      <td className="px-5 py-3.5 font-semibold text-tierra-oscura">{day}</td>
+      <td className="px-5 py-3.5 font-semibold text-tierra">{day}</td>
       <td className="px-5 py-3.5 text-gray-600">{format}</td>
       <td className="px-5 py-3.5">
         <span className={`inline-block text-xs px-2 py-0.5 rounded-full font-medium ${pillarbg}`}>
@@ -432,7 +432,7 @@ function PostIdeaCard({ number, idea }: { number: number; idea: PostIdea }) {
       </span>
       <div className="flex-1 min-w-0">
         <div className="flex items-start justify-between gap-4 flex-wrap">
-          <h3 className="font-semibold text-tierra-oscura text-sm">{idea.title}</h3>
+          <h3 className="font-semibold text-tierra text-sm">{idea.title}</h3>
           <span className={`text-xs px-2 py-0.5 rounded-full flex-shrink-0 ${idea.pillarStyle}`}>
             {idea.pillar}
           </span>
@@ -441,7 +441,7 @@ function PostIdeaCard({ number, idea }: { number: number; idea: PostIdea }) {
         <p className="text-xs text-gray-600 mb-2">{idea.description}</p>
         <div className="flex flex-wrap gap-1">
           {idea.hashtags.map((tag) => (
-            <span key={tag} className="text-xs text-verde-aragon/70 font-mono">{tag}</span>
+            <span key={tag} className="text-xs text-verde-vida/70 font-mono">{tag}</span>
           ))}
         </div>
       </div>
@@ -452,7 +452,7 @@ function PostIdeaCard({ number, idea }: { number: number; idea: PostIdea }) {
 function HashtagSet({ title, color, tags }: { title: string; color: string; tags: string[] }) {
   return (
     <div className={`rounded-lg border p-4 ${color}`}>
-      <p className="font-semibold text-tierra-oscura text-sm mb-3">{title}</p>
+      <p className="font-semibold text-tierra text-sm mb-3">{title}</p>
       <div className="flex flex-wrap gap-1.5">
         {tags.map((tag) => (
           <span key={tag} className="text-xs font-mono text-gray-600 bg-white/70 px-1.5 py-0.5 rounded border border-gray-200">
@@ -476,7 +476,7 @@ type PostIdea = {
 };
 
 const primaryHashtags = [
-  "#InmobiliariaSamper",
+  "#Revivtaliza",
   "#BajoAragon",
   "#Teruel",
   "#casarural",
@@ -492,7 +492,7 @@ const postIdeas: PostIdea[] = [
     hook: "Casa de piedra en Alcorisa lista para ser habitada. ¿Te la imaginas?",
     description: "Carrusel de 8-10 fotos: exterior, salón, cocina, habitaciones, patio y entorno. Incluir precio, m² y CTA al link en bio.",
     pillar: "Propiedades",
-    pillarStyle: "bg-verde-aragon/10 text-verde-aragon",
+    pillarStyle: "bg-verde-vida/10 text-verde-vida",
     hashtags: ["#casarural", "#Alcorisa", "#seVende", "#BajoAragon"],
   },
   {
@@ -500,7 +500,7 @@ const postIdeas: PostIdea[] = [
     hook: "30 segundos para enamorarte de esta casa en Samper de Calanda",
     description: "Vídeo corto con música tranquila (folk o ambient). Planos: fachada, entrada, habitaciones, vistas. Sin voz en off, solo texto superpuesto con datos clave.",
     pillar: "Propiedades",
-    pillarStyle: "bg-verde-aragon/10 text-verde-aragon",
+    pillarStyle: "bg-verde-vida/10 text-verde-vida",
     hashtags: ["#houseTour", "#SamperDeCalanda", "#inmuebles", "#Reel"],
   },
   {
@@ -508,7 +508,7 @@ const postIdeas: PostIdea[] = [
     hook: "Mira cómo quedó esta casa que parecía perdida para siempre",
     description: "Fotos del estado original vs. estado actual o reformado. Ideal para mostrar el potencial de casas abandonadas. Pide permiso al comprador o dueño.",
     pillar: "Propiedades",
-    pillarStyle: "bg-verde-aragon/10 text-verde-aragon",
+    pillarStyle: "bg-verde-vida/10 text-verde-vida",
     hashtags: ["#rehabilitacion", "#reforma", "#casarural", "#antesDespues"],
   },
   {
@@ -516,7 +516,7 @@ const postIdeas: PostIdea[] = [
     hook: "¿Sabías que hay casas en el Bajo Aragón por menos de 20.000 €?",
     description: "Destaca una propiedad de bajo precio con alto potencial. Útil para atraer inversores y compradores de presupuesto ajustado.",
     pillar: "Propiedades",
-    pillarStyle: "bg-verde-aragon/10 text-verde-aragon",
+    pillarStyle: "bg-verde-vida/10 text-verde-vida",
     hashtags: ["#inmobiliaria", "#inversiónrural", "#casabarata", "#oportunidad"],
   },
   {
@@ -524,7 +524,7 @@ const postIdeas: PostIdea[] = [
     hook: "Esto es lo que ves desde el jardín de algunas de nuestras casas",
     description: "Fotos del paisaje de almendros en flor, olivares o campos. Contenido aspiracional que vende el estilo de vida más que la casa.",
     pillar: "Territorio",
-    pillarStyle: "bg-ocre-calanda/20 text-amber-700",
+    pillarStyle: "bg-terracota/20 text-amber-700",
     hashtags: ["#BajoAragon", "#paisaje", "#naturaleza", "#Aragon", "#primavera"],
   },
   {
@@ -532,7 +532,7 @@ const postIdeas: PostIdea[] = [
     hook: "5 razones para vivir en Híjar que probablemente no conoces",
     description: "Carrusel: cada slide presenta un motivo (tranquilidad, precio de vida, naturaleza, comunidad, conexión por carretera). Termina con «y nosotros te encontramos la casa».",
     pillar: "Territorio",
-    pillarStyle: "bg-ocre-calanda/20 text-amber-700",
+    pillarStyle: "bg-terracota/20 text-amber-700",
     hashtags: ["#Hijar", "#vivirenpueblo", "#BajoAragon", "#calidad de vida"],
   },
   {
@@ -540,7 +540,7 @@ const postIdeas: PostIdea[] = [
     hook: "Buenas noches desde Chiprana. ¿Quién quiere despertar aquí mañana?",
     description: "Foto o Reel corto de un atardecer espectacular. Contenido de alto engagement, fácil de producir. Ideal para fin de semana.",
     pillar: "Territorio",
-    pillarStyle: "bg-ocre-calanda/20 text-amber-700",
+    pillarStyle: "bg-terracota/20 text-amber-700",
     hashtags: ["#Chiprana", "#sunset", "#Aragon", "#ruralphotography"],
   },
   {
@@ -548,7 +548,7 @@ const postIdeas: PostIdea[] = [
     hook: "Reunión por Zoom a las 10. Paseo por el monte a las 13. Así es vivir en el Bajo Aragón.",
     description: "Post de lifestyle mostrando cómo se puede teletrabajar desde un pueblo. Atrae al segmento nómada digital. Puedes hacer colaboración con algún teletrabajador local.",
     pillar: "Territorio",
-    pillarStyle: "bg-ocre-calanda/20 text-amber-700",
+    pillarStyle: "bg-terracota/20 text-amber-700",
     hashtags: ["#teletrabajo", "#nomadadigital", "#remotework", "#ruralliving"],
   },
   {
@@ -585,7 +585,7 @@ const postIdeas: PostIdea[] = [
   },
   {
     title: "Cómo funciona — en 5 pasos",
-    hook: "Desde «quiero vender» hasta escritura firmada: así funciona Inmobiliaria Samper",
+    hook: "Desde «quiero vender» hasta escritura firmada: así funciona Revivtaliza",
     description: "Infografía o carrusel con los 5 pasos: contacto → visita y fotos → publicación → visitas de compradores → cierre. Simple, visual, sin jerga.",
     pillar: "Confianza",
     pillarStyle: "bg-salvia/40 text-green-700",
@@ -605,7 +605,7 @@ const postIdeas: PostIdea[] = [
     description: "Post personal presentando la agencia, su origen y por qué se especializa en propiedades rurales. Humaniza la marca y genera confianza.",
     pillar: "Confianza",
     pillarStyle: "bg-salvia/40 text-green-700",
-    hashtags: ["#InmobiliariaSamper", "#equipo", "#BajoAragon", "#sobreNosotros"],
+    hashtags: ["#Revivtaliza", "#equipo", "#BajoAragon", "#sobreNosotros"],
   },
   {
     title: "Testimonio de cliente satisfecho",
@@ -620,7 +620,7 @@ const postIdeas: PostIdea[] = [
     hook: "¿Cuánto cuesta realmente una casa rural en Teruel? Menos de lo que piensas.",
     description: "Post informativo con rangos de precio según municipio y tipo de propiedad. Útil para compradores. Puede llevar tráfico al catálogo.",
     pillar: "Propiedades",
-    pillarStyle: "bg-verde-aragon/10 text-verde-aragon",
+    pillarStyle: "bg-verde-vida/10 text-verde-vida",
     hashtags: ["#preciosCasas", "#inmobiliaria", "#Teruel", "#inversión"],
   },
   {
@@ -628,7 +628,7 @@ const postIdeas: PostIdea[] = [
     hook: "Ayúdanos a encontrar la casa perfecta para ti — vota en la encuesta",
     description: "Story con encuesta de Instagram (o post con pregunta en comments): ¿Piscina o jardín grande? ¿Pueblo o campo abierto? ¿Reformada o a reformar? Alto engagement.",
     pillar: "Territorio",
-    pillarStyle: "bg-ocre-calanda/20 text-amber-700",
+    pillarStyle: "bg-terracota/20 text-amber-700",
     hashtags: ["#encuesta", "#casarural", "#BajoAragon", "#tuOpinion"],
   },
   {
@@ -636,7 +636,7 @@ const postIdeas: PostIdea[] = [
     hook: "Un día en Andorra (Teruel): así se vive aquí en otoño",
     description: "Vídeo de 30-60s con tomas del municipio a lo largo de un día: mercado, calles, naturaleza cercana, atardecer. Contenido aspiracional y turístico.",
     pillar: "Territorio",
-    pillarStyle: "bg-ocre-calanda/20 text-amber-700",
+    pillarStyle: "bg-terracota/20 text-amber-700",
     hashtags: ["#Andorra", "#Teruel", "#rutarural", "#BajoAragon", "#diario"],
   },
   {
@@ -644,7 +644,7 @@ const postIdeas: PostIdea[] = [
     hook: "En Zaragoza pagas 1.200 €/mes de alquiler. En Samper compras por 45.000 €.",
     description: "Infografía simple comparando coste de vida ciudad vs. Bajo Aragón. Muy compartible y genera debate. Ideal para captar compradores urbanos.",
     pillar: "Propiedades",
-    pillarStyle: "bg-verde-aragon/10 text-verde-aragon",
+    pillarStyle: "bg-verde-vida/10 text-verde-vida",
     hashtags: ["#CiudadVsPueblo", "#Zaragoza", "#SamperDeCalanda", "#calidad de vida"],
   },
 ];

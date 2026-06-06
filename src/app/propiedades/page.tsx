@@ -6,9 +6,9 @@ import FilterSidebar from "@/components/FilterSidebar";
 import { Propiedad } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Propiedades en venta",
+  title: "Casas en pueblos del Bajo Aragón",
   description:
-    "Explora nuestro catálogo completo de casas, pisos, terrenos y locales en el Bajo Aragón.",
+    "Explora nuestro catálogo de casas disponibles en municipios del Bajo Aragón. Encuentra tu hogar en el pueblo y contribuye a revitalizar el territorio.",
 };
 
 interface SearchParams {
@@ -50,11 +50,11 @@ export default async function PropiedadesPage({
   const activeFilters = Object.values(searchParams).filter(Boolean).length;
 
   return (
-    <div className="bg-crema-campo min-h-screen">
+    <div className="bg-crema min-h-screen">
       {/* Header */}
-      <div className="bg-verde-aragon text-crema-campo py-12">
+      <div className="bg-verde-vida text-crema py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="font-serif text-4xl font-bold mb-2">Propiedades</h1>
+          <h1 className="font-serif text-4xl font-bold mb-2">Casas en pueblos del Bajo Aragón</h1>
           <p className="text-salvia">
             {propiedades.length} propiedad{propiedades.length !== 1 ? "es" : ""} encontrada{propiedades.length !== 1 ? "s" : ""}
             {activeFilters > 0 ? ` con ${activeFilters} filtro${activeFilters > 1 ? "s" : ""} activo${activeFilters > 1 ? "s" : ""}` : ""}

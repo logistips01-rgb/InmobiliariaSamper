@@ -21,7 +21,7 @@ export default async function EncargosPage() {
     <div>
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="font-serif text-2xl font-bold text-tierra-oscura">
+          <h1 className="font-serif text-2xl font-bold text-tierra">
             Encargos de venta
           </h1>
           <p className="text-gray-500 text-sm mt-1">
@@ -36,7 +36,7 @@ export default async function EncargosPage() {
       </div>
 
       {encargos.length === 0 ? (
-        <div className="bg-crema-campo rounded-xl p-12 text-center">
+        <div className="bg-crema rounded-xl p-12 text-center">
           <svg className="w-10 h-10 text-gray-300 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
           <p className="text-gray-600">Aún no hay encargos recibidos.</p>
         </div>
@@ -52,7 +52,7 @@ export default async function EncargosPage() {
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h2 className="font-semibold text-tierra-oscura">
+                      <h2 className="font-semibold text-tierra">
                         {encargo.nombre}
                       </h2>
                       <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${est.color}`}>
@@ -68,10 +68,10 @@ export default async function EncargosPage() {
                     </div>
 
                     <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-                      <a href={`mailto:${encargo.email}`} className="hover:text-verde-aragon underline">
+                      <a href={`mailto:${encargo.email}`} className="hover:text-verde-vida underline">
                         {encargo.email}
                       </a>
-                      <a href={`tel:${encargo.telefono}`} className="hover:text-verde-aragon">
+                      <a href={`tel:${encargo.telefono}`} className="hover:text-verde-vida">
                         {encargo.telefono}
                       </a>
                     </div>
@@ -81,7 +81,7 @@ export default async function EncargosPage() {
                     )}
 
                     {encargo.descripcion && (
-                      <p className="text-sm text-gray-600 mt-3 bg-crema-campo rounded-lg px-4 py-2">
+                      <p className="text-sm text-gray-600 mt-3 bg-crema rounded-lg px-4 py-2">
                         {encargo.descripcion}
                       </p>
                     )}

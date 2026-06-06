@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-crema-campo flex items-center justify-center px-4">
+    <div className="min-h-screen bg-crema flex items-center justify-center px-4">
       <div className="text-center max-w-md">
-        <p className="font-serif text-8xl font-bold text-verde-aragon opacity-20 mb-4">404</p>
-        <h1 className="font-serif text-3xl font-bold text-tierra-oscura mb-3">
+        <p className="font-serif text-8xl font-bold text-verde-vida opacity-20 mb-4">404</p>
+        <h1 className="font-serif text-3xl font-bold text-tierra mb-3">
           Página no encontrada
         </h1>
         <p className="text-gray-600 mb-8">

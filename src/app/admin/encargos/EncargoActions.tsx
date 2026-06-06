@@ -39,7 +39,7 @@ export default function EncargoActions({ encargo }: { encargo: { id: number; est
         value={encargo.estado}
         onChange={(e) => updateEstado(e.target.value)}
         disabled={loading}
-        className="text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-verde-aragon bg-white"
+        className="text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-verde-vida bg-white"
       >
         {estados.map((e) => (
           <option key={e.value} value={e.value}>{e.label}</option>

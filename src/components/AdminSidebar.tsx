@@ -66,10 +66,10 @@ export default function AdminSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 bg-verde-aragon text-crema-campo min-h-screen flex flex-col">
+    <aside className="w-64 bg-verde-vida text-crema min-h-screen flex flex-col">
       <div className="p-6 border-b border-green-800">
-        <h2 className="font-serif text-lg font-bold text-ocre-calanda">Panel Admin</h2>
-        <p className="text-xs text-salvia mt-1">Inmobiliaria Samper</p>
+        <h2 className="font-serif text-lg font-bold text-terracota">Panel Admin</h2>
+        <p className="text-xs text-salvia mt-1">Revivtaliza</p>
       </div>
 
       <nav className="flex-1 p-4 space-y-1">
@@ -84,8 +84,8 @@ export default function AdminSidebar() {
               href={link.href}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                 isActive
-                  ? "bg-ocre-calanda text-tierra-oscura"
-                  : "text-crema-campo/80 hover:bg-green-800 hover:text-crema-campo"
+                  ? "bg-terracota text-tierra"
+                  : "text-crema/80 hover:bg-green-800 hover:text-crema"
               }`}
             >
               {link.icon}
@@ -100,8 +100,8 @@ export default function AdminSidebar() {
             href="/admin/recursos"
             className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
               pathname.startsWith("/admin/recursos")
-                ? "bg-ocre-calanda text-tierra-oscura"
-                : "text-crema-campo/80 hover:bg-green-800 hover:text-crema-campo"
+                ? "bg-terracota text-tierra"
+                : "text-crema/80 hover:bg-green-800 hover:text-crema"
             }`}
           >
             <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,8 +120,8 @@ export default function AdminSidebar() {
                     href={link.href}
                     className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
                       isSubActive
-                        ? "bg-green-800 text-crema-campo"
-                        : "text-crema-campo/60 hover:bg-green-800/60 hover:text-crema-campo"
+                        ? "bg-green-800 text-crema"
+                        : "text-crema/60 hover:bg-green-800/60 hover:text-crema"
                     }`}
                   >
                     <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -139,7 +139,7 @@ export default function AdminSidebar() {
       <div className="p-4 border-t border-green-800">
         <Link
           href="/"
-          className="flex items-center gap-2 text-xs text-crema-campo/60 hover:text-crema-campo transition-colors"
+          className="flex items-center gap-2 text-xs text-crema/60 hover:text-crema transition-colors"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

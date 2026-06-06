@@ -4,14 +4,14 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contacto",
   description:
-    "Contacta con Inmobiliaria Samper. Estamos en Samper de Calanda, Teruel. Llámanos o escríbenos.",
+    "Contacta con Revivtaliza. Estamos en el Bajo Aragón, Teruel. Escríbenos si quieres vivir en un pueblo o tienes una casa sin usar.",
 };
 
 export default function ContactoPage() {
   return (
-    <div className="bg-crema-campo min-h-screen">
+    <div className="bg-crema min-h-screen">
       {/* Header */}
-      <div className="bg-verde-aragon text-crema-campo py-16">
+      <div className="bg-verde-vida text-crema py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-serif text-5xl font-bold mb-3">Contacto</h1>
           <p className="text-salvia text-lg max-w-xl mx-auto">
@@ -24,7 +24,7 @@ export default function ContactoPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Info */}
           <div>
-            <h2 className="font-serif text-3xl font-bold text-tierra-oscura mb-6">
+            <h2 className="font-serif text-3xl font-bold text-tierra mb-6">
               Visítanos o escríbenos
             </h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
@@ -61,8 +61,8 @@ export default function ContactoPage() {
                   </svg>
                 }
                 title="Correo electrónico"
-                content="info@inmobiliariasamper.es"
-                href="mailto:info@inmobiliariasamper.es"
+                content="hola@revivtaliza.es"
+                href="mailto:hola@revivtaliza.es"
               />
               <ContactInfoItem
                 icon={
@@ -78,7 +78,7 @@ export default function ContactoPage() {
 
           {/* Form */}
           <div className="bg-white rounded-2xl p-8 shadow-md">
-            <h2 className="font-serif text-2xl font-bold text-tierra-oscura mb-6">
+            <h2 className="font-serif text-2xl font-bold text-tierra mb-6">
               Envíanos un mensaje
             </h2>
             <ContactForm />
@@ -102,13 +102,13 @@ function ContactInfoItem({
 }) {
   return (
     <div className="flex items-start gap-4">
-      <div className="w-10 h-10 rounded-lg bg-verde-aragon text-ocre-calanda flex items-center justify-center flex-shrink-0">
+      <div className="w-10 h-10 rounded-lg bg-verde-vida text-terracota flex items-center justify-center flex-shrink-0">
         {icon}
       </div>
       <div>
-        <p className="font-semibold text-tierra-oscura text-sm mb-0.5">{title}</p>
+        <p className="font-semibold text-tierra text-sm mb-0.5">{title}</p>
         {href ? (
-          <a href={href} className="text-gray-600 text-sm hover:text-verde-aragon transition-colors whitespace-pre-line">
+          <a href={href} className="text-gray-600 text-sm hover:text-verde-vida transition-colors whitespace-pre-line">
             {content}
           </a>
         ) : (

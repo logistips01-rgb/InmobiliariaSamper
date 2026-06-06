@@ -39,13 +39,13 @@ function LoginForm() {
   };
 
   return (
-    <div className="min-h-screen bg-verde-aragon flex items-center justify-center px-4">
+    <div className="min-h-screen bg-verde-vida flex items-center justify-center px-4">
       <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-sm">
         <div className="text-center mb-8">
-          <h1 className="font-serif text-2xl font-bold text-tierra-oscura mb-1">
+          <h1 className="font-serif text-2xl font-bold text-tierra mb-1">
             Panel de Administración
           </h1>
-          <p className="text-sm text-gray-500">Inmobiliaria Samper</p>
+          <p className="text-sm text-gray-500">Revivtaliza</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -86,7 +86,7 @@ function LoginForm() {
 
 export default function AdminLoginPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-verde-aragon" />}>
+    <Suspense fallback={<div className="min-h-screen bg-verde-vida" />}>
       <LoginForm />
     </Suspense>
   );
