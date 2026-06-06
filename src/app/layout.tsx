@@ -7,21 +7,22 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Inmobiliaria Samper — Donde encontramos el hogar que nadie ve",
-    template: "%s | Inmobiliaria Samper",
+    default: "Revivtaliza — Donde las casas vuelven a vivir",
+    template: "%s | Revivtaliza",
   },
   description:
-    "Inmobiliaria Samper — especialistas en casas, pisos, terrenos y locales en el Bajo Aragón: Samper de Calanda, Alcorisa, Andorra, Híjar y alrededores.",
+    "Revivtaliza conecta casas abandonadas del Bajo Aragón con personas que quieren vivir diferente. Combatimos la despoblación rural en Teruel a través del mercado inmobiliario.",
   keywords: [
-    "inmobiliaria",
-    "Samper de Calanda",
+    "despoblación",
+    "casas rurales",
     "Bajo Aragón",
-    "casas",
-    "pisos",
-    "terrenos",
+    "Teruel",
+    "casas abandonadas",
+    "vivir en el pueblo",
     "Alcorisa",
     "Andorra",
     "Híjar",
+    "Samper de Calanda",
   ],
 };
 

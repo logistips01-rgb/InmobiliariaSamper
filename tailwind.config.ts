@@ -9,10 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // New brand colors
+        "verde-vida": "#1C3A2B",
+        "terracota": "#C4622D",
+        "crema": "#F5F0E8",
+        "salvia": "#A8C4A8",
+        "tierra": "#3C2E1A",
+        // Legacy aliases (keep so any remaining references don't break)
         "verde-aragon": "#1C3A2B",
-        "ocre-calanda": "#D4A847",
+        "ocre-calanda": "#C4622D",
         "crema-campo": "#F5F0E8",
-        salvia: "#A8C4A8",
         "tierra-oscura": "#3C2E1A",
       },
       fontFamily: {
